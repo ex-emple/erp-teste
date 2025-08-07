@@ -1,0 +1,11 @@
+run = ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+
+[deployment]
+deploymentTarget = "cloudrun"
+
+[nix]
+channel = "stable-22_11"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
